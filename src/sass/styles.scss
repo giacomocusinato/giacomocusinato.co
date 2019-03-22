@@ -1,0 +1,59 @@
+// variables
+@import "config/variables";
+@import "components/glitch";
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+a,
+a.active,
+p {
+  font-family: $title-font;
+  color: $gray200;
+}
+
+.emph {
+  background-color: white;
+  color: black;
+  padding: 0 8px;
+}
+
+.desc {
+  @include textGlitch("desc", 8, white, black, red, blue, 450, 180);
+
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  font-size: 1.1em;
+  @media (max-width: 420px) {
+    width: 100%;
+    font-size: 1em;
+    @include textGlitch("desc", 8, white, black, red, blue, 450, 120);
+  }
+}
+
+.contact {
+  font-size: 1em;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  bottom: 8px;
+  margin-left: 4px;
+  transform: translate(-50%, 50%);
+  a { opacity: 0.9; }
+  @media (max-width: 420px) {
+    font-size: 0.9em;
+  }
+}
+
+.contact-link:hover {
+  opacity: 1 !important;
+  @include textGlitch("contact-link", 25, white, black, red, blue, 450, 115);
+}
