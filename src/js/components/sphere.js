@@ -26,7 +26,7 @@ function init() {
   renderer.setPixelRatio(window.devicePixelRatio);
 
   camera = new THREE.PerspectiveCamera(45, vw / vh, 1, 1000);
-  camera.position.z = 160;//130;
+  camera.position.z = 180;//130;
   camera.position.x = 0;
   camera.position.y = 0;
   camera.lookAt(scene.position);
